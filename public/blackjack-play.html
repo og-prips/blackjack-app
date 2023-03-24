@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/blackjack-play.js" defer></script>
+    <script src="js/models/blackjack.js" defer></script>
+    <script src="js/models/player.js" defer></script>
+    <script src="js/models/card.js" defer></script>
+    <script src="js/models/deck.js" defer></script>
+    <script src="js/models/hand.js" defer></script>
+    <script src="js/models/user.js" defer></script>
+    <script src="js/utils/cookie-utils.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Blackjack</title>
+  </head>
+  <body>
+    <div class="menu">
+      <button id="logout">Logga ut</button>
+    </div>
+    <div id="bet-container">
+      <button id="deal">DEAL</button>
+      <div id="balance-container">
+        <span>Saldo:</span>
+        <h1 id="balance-amount"></h1>
+        <span>Bet:</span>
+        <h1 id="bet-amount">0</h1>
+        <br />
+        <input type="number" id="balance-input" />
+        <button id="balance-add">Sätt in pengar</button>
+      </div>
+      <div id="bet-buttons">
+        <button id="marker-1" class="marker" value="1">1</button>
+        <button id="marker-10" class="marker" value="10">10</button>
+        <button id="marker-100" class="marker" value="100">100</button>
+        <button id="marker-250" class="marker" value="250">250</button>
+        <button id="marker-500" class="marker" value="500">500</button>
+      </div>
+    </div>
+    <div id="game-container" class="center">
+      <div id="dealer-container">
+        <h1 id="dealer-score" class="score-text"></h1>
+        <div id="dealer-cards" class="game-cards"></div>
+      </div>
+      <div id="option-buttons">
+        <button id="hit">HIT</button>
+        <button id="stand">STAND</button>
+      </div>
+      <div id="player-container">
+        <h1 id="player-score" class="score-text"></h1>
+        <div id="player-cards" class="game-cards"></div>
+      </div>
+    </div>
+    <div class="center">
+      <div id="end-screen">
+        <h1 id="end-text">GAME TEXT</h1>
+        <h2 id="balance-text-result">balance text</h2>
+        <button id="play-again">PLAY AGAIN</button>
+      </div>
+    </div>
+  </body>
+</html>
